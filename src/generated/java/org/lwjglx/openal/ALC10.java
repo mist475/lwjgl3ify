@@ -45,6 +45,13 @@ public class ALC10 {
         return returnValue;
     }
 
+    public static org.lwjglx.openal.ALCdevice alcGetContextsDevice(org.lwjglx.openal.ALCcontext context) {
+
+        org.lwjglx.openal.ALCdevice returnValue =  new ALCdevice(org.lwjgl.openal.ALC10.alcGetContextsDevice(context.context));
+
+        return returnValue;
+    }
+
     public static int alcGetEnumValue(org.lwjglx.openal.ALCdevice device, java.lang.String enumName) {
 
         int returnValue = org.lwjgl.openal.ALC10.alcGetEnumValue(device.device, enumName);
